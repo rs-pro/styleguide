@@ -47,55 +47,65 @@
 * Отделяй многострочные блоки 1 пустой строкой с обоих сторон.
 * Use spaces around operators, after commas, colons and semicolons, around { and before }.
 
-    sum = 1 + 2
-    a, b = 1, 2
-    1 > 2 ? true : false; puts "Hi"
-    [1, 2, 3].each { |e| puts e }
+```ruby
+sum = 1 + 2
+a, b = 1, 2
+1 > 2 ? true : false; puts "Hi"
+[1, 2, 3].each { |e| puts e }
+```
 
 * Не добавляй пробелы после `(`, `[` или перед `]`, `)`.
 
-    some(arg).other
-    [1, 2, 3].length
+```ruby
+some(arg).other
+[1, 2, 3].length
+```
 
 * Не добавляй пробел после !.
 
-    !array.include?(element)
+```ruby
+!array.include?(element)
+```
 
 * Indent when as deep as case.
 
-    case
-    when song.name == "Misty"
-      puts "Not again!"
-    when song.duration > 120
-      puts "Too long!"
-    when Time.now.hour > 21
-      puts "It's too late"
-    else
-      song.play
-    end
-    
-    kind = case year
-           when 1850..1889 then "Blues"
-           when 1890..1909 then "Ragtime"
-           when 1910..1929 then "New Orleans Jazz"
-           when 1930..1939 then "Swing"
-           when 1940..1950 then "Bebop"
-           else "Jazz"
-           end
-           
+```ruby
+case
+when song.name == "Misty"
+  puts "Not again!"
+when song.duration > 120
+  puts "Too long!"
+when Time.now.hour > 21
+  puts "It's too late"
+else
+  song.play
+end
+
+kind = case year
+       when 1850..1889 then "Blues"
+       when 1890..1909 then "Ragtime"
+       when 1910..1929 then "New Orleans Jazz"
+       when 1930..1939 then "Swing"
+       when 1940..1950 then "Bebop"
+       else "Jazz"
+       end
+```
+
 * Отделяй методы 1 пустой строкой и чтобы разделить метод на параграфы.
 
-  def some_method
+```ruby
+def some_method
     data = initialize(options)
 
     data.manipulate!
 
     data.result
-  end
+end
 
-  def some_method
+def some_method
     result
-  end
+end
+```
 
 [дополнительно](https://github.com/styleguide/ruby)
 
@@ -108,10 +118,11 @@
 ### CSS ресет
 
 * Хорошие CSS ресеты:
-
-    *
-      margin: 0
-      padding: 0
+```css
+*
+  margin: 0
+  padding: 0
+```
 
 [normalize](http://necolas.github.io/normalize.css/)
 
@@ -138,15 +149,14 @@ In general, the CSS file organization should follow something like this:
         └── markdown.scss
 
 Use Sprockets to require files. However, you should explicitly import any scss that does not generate styles (globals/) in the particular SCSS file you'll be needing it's helpers in. Here's a good example:
-
-    //= require_tree ./plugins
-    //= require my_awesome_styles
+```sass
+    #= require_tree ./plugins
+    #= require my_awesome_styles
     
-    @import "../globals/basic";
+    @import ../globals/basic
     
     .rule { ... }
-
-
+```
 ### Class naming conventions
 
 Никогда не используй в CSS классы с префиксом ```js-```. js- are used exclusively from JS files.
