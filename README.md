@@ -31,8 +31,8 @@
 * Избегай файлов больше 100 строк кода (не считая пустых строк и комментариев).
 * Используй SASS @import\@mixin, concerns и т.д.
 * Удаляй пробелы в конце всех строк.
-* Используй [Unix-style line endings] (`\n`) ([git eol]).
-* Добавляй пустую строку в конце файла [Unix-style line endings]
+* Используй Unix-style line endings (`\n`) ([git eol]).
+* Добавляй пустую строку в конце файла [eof]
 * Не делай орфографических ошибок, особенно в английских названиях переменных. Если не знаете перевод, посмотрите его [в словаре].
 * Не выравнивай символы друг с другом на разных строчках.
 * Если разбиваешь список аргументов, каждый аргумент должен быть на своей строчке, также как и закрывающая скобка.
@@ -42,8 +42,7 @@
 [git eol]: https://help.github.com/articles/dealing-with-line-endings
 [в словаре]: http://slovari.yandex.ru/
 [dot guideline example]: https://github.com/thoughtbot/guides/blob/master/style/samples/ruby.rb#L11
-[Unix-style line endings]: http://unix.stackexchange.com/questions/23903/should-i-end-my-text-script-files-with-a-newline
-
+[eof]: http://unix.stackexchange.com/questions/23903/should-i-end-my-text-script-files-with-a-newline
 
 ## Ruby
 
