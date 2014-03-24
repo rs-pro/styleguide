@@ -134,21 +134,23 @@ end
 
     stylesheets
     ├── mixins
-    │   ├── browser_helpers.sass
-    │   ├── responsive_helpers.sass
-    │   └── variables.sass
+    │   ├── browser_helpers.css.sass
+    │   ├── responsive_helpers.css.sass
+    │   └── variables.css.sass
     ├── plugins
     │   ├── jquery.fancybox-1.3.4.css
-    │   └── reset.scss
+    │   └── reset.css.sass
     ├── pages
-    │   ├── issues.scss
-    │   └── profile.scss
+    │   ├── issues.css.sass
+    │   └── profile.css.sass
     ├── extra
-    │   └── editor.scss
-    └── shared
-        ├── forms.scss
-        └── markdown.scss
-        
+    │   └── editor.css.sass
+    ├── shared
+    │   ├── forms.css.sass
+    │   └── markdown.css.sass
+    ├── application.css.sass
+    └── ckcontent.css.sass
+    
 ### Весь CSS, использующийся только на одной конкретной странице, должен быть в отдельном файле, соответствующем этой странице. Все селекторы, относящиеся к конкретной странице, должны начинаться с класса ```.#{params[:controller]}_#{params[:action]}```
 
 SASS\SCSS файлы необходимо всегда загружать через @import, простые CSS файлы - через require. В простом CSS недопустимы ссылки на картинки и другие внешние файлы, кроме случая когда они лежат в папке ```public/```
