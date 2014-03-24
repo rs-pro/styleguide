@@ -11,6 +11,7 @@
 ## Язык
 
 "Избегай" значит не делай без хорошей причины.
+
 "Никогда" значит хорошей причины не существует.
 
 ## Git
@@ -128,27 +129,28 @@ end
 
 ### Организация кода
 
-In general, the CSS file organization should follow something like this:
+Пример хорошей организации CSS:
 
-    styles
-    ├── components
-    │   ├── comments.scss
-    │   └── listings.scss
-    ├── globals
-    │   ├── browser_helpers.scss
-    │   ├── responsive_helpers.scss
-    │   ├── variables.scss
+    stylesheets
+    ├── mixins
+    │   ├── browser_helpers.sass
+    │   ├── responsive_helpers.sass
+    │   └── variables.sass
     ├── plugins
     │   ├── jquery.fancybox-1.3.4.css
     │   └── reset.scss
-    ├── sections
+    ├── pages
     │   ├── issues.scss
-    │   ├── profile.scss
+    │   └── profile.scss
+    ├── extra
+    │   └── editor.scss
     └── shared
         ├── forms.scss
         └── markdown.scss
+        
+### Весь CSS, использующийся только на одной конкретной странице, должен быть в отдельном файле, соответствующем этой странице. Все селекторы, относящиеся к конкретной странице, должны начинаться с класса ```.#{params[:controller}_#{params[:action]}```
 
-Use Sprockets to require files. However, you should explicitly import any scss that does not generate styles (globals/) in the particular SCSS file you'll be needing it's helpers in. Here's a good example:
+SASS\SCSS файлы необходимо всегда загружать через @import, простые CSS файлы - через require. В простом CSS недопустимы ссылки на картинки и другие внешние файлы, кроме случая когда они лежат в папке ```public/```
 ```sass
     #= require_tree ./plugins
     #= require my_awesome_styles
@@ -157,18 +159,20 @@ Use Sprockets to require files. However, you should explicitly import any scss t
     
     .rule { ... }
 ```
-### Class naming conventions
 
-Никогда не используй в CSS классы с префиксом ```js-```. js- are used exclusively from JS files.
+### Названия классов
 
-Use the is- prefix for state rules that are shared between CSS and JS.
+Никогда не используй в CSS классы с префиксом ```js-```. js- только для JS файлов.
 
-## Specificity (classes vs. ids)
+Используй префикс is- для классов состояния которые разделяются между CSS и JS.
 
-Elements that occur exactly once inside a page should use IDs, otherwise, use classes. When in doubt, use a class name.
+## Специфичность (классы vs. ids)
 
-Good candidates for ids: header, footer, modal popups.
-Bad candidates for ids: navigation, item listings, item view pages (ex: issue view).
+Элементы, которые встречаются на странице всегда строго 1 раз, должны использовать ID, иначе классы. Если сомневаетесь, используйте класс.
+
+Хорошие кандидаты в id: header, footer, уникальные модальные окна.
+Плохие: navigation, item listings, item view pages (ex: issue view).
+
 When styling a component, start with an element + class namespace (prefer class names over ids), prefer direct descendant selectors by default, and use as little specificity as possible. Here is a good example:
 
     <ul class="category-list">
@@ -177,11 +181,9 @@ When styling a component, start with an element + class namespace (prefer class 
       <li class="item">Category 3</li>
     </ul>
     ul.category-list { // element + class namespace
-    
       &>li { // direct descendant selector > for list items
         list-style-type: disc;
       }
-    
       a { // minimal specificity for all links
         color: #ff0000;
       }
@@ -189,10 +191,9 @@ When styling a component, start with an element + class namespace (prefer class 
 
 ### CSS Specificity guidelines
 
-If you must use an id selector (#selector) make sure that you have no more than one in your rule declaration. A rule like #header .search #quicksearch { ... } is considered harmful.
-When modifying an existing element for a specific use, try to use specific class names. Instead of .listings-layout.bigger use rules like .listings-layout.listings-bigger. Think about ack/greping your code in the future.
-The class names disabled, mousedown, danger, hover, selected, and active should always be namespaced by a class (button.selected is a good example).
-
+If you must use an id selector ```(#selector)``` make sure that you have no more than one in your rule declaration. A rule like ```#header .search #quicksearch { ... }``` is considered harmful.
+When modifying an existing element for a specific use, try to use specific class names. Instead of ```.listings-layout.bigger use rules like .listings-layout.listings-bigger.``` Think about ack/greping your code in the future.
+The class names disabled, mousedown, danger, hover, selected, and active should always be namespaced by a class (```button.selected``` is a good example).
 
 
 ## Источники
