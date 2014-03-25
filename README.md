@@ -111,6 +111,14 @@ end
 
 [дополнительно](https://github.com/styleguide/ruby)
 
+## Прием макета в верстку
+
+Вместе с макетом, должны быть получены следующие вещи:
+
+* ТЗ, хотя бы минимальное
+* Шрифты, используемые в макете
+* Для всех активных элементов (ссылок, кнопок) должно присутствовать наведенное состояние
+
 ## CSS
 
 * Используй SASS синтакс
@@ -129,7 +137,7 @@ end
 
 [normalize](http://necolas.github.io/normalize.css/)
 
-### Организация кода
+### Организация CSS
 
 Пример хорошей организации CSS:
 
@@ -199,6 +207,14 @@ When styling a component, start with an element + class namespace (prefer class 
 If you must use an id selector ```(#selector)``` make sure that you have no more than one in your rule declaration. A rule like ```#header .search #quicksearch { ... }``` is considered harmful.
 When modifying an existing element for a specific use, try to use specific class names. Instead of ```.listings-layout.bigger use rules like .listings-layout.listings-bigger.``` Think about ack/greping your code in the future.
 The class names disabled, mousedown, danger, hover, selected, and active should always be namespaced by a class (```button.selected``` is a good example).
+
+### Партиалы
+
+При верстке, старайся выделять повторяющиеся вещи в партиалы. Хорошие кандидаты в партиал - меню, карточка товара\новости и т.д., любой элемент повторяющийся более чем в одном месте.
+
+Элементы, повторяющиеся в трех местах и более обязательно нужно выделять в партиал.
+
+## Прием верстки в программирование
 
 
 ## Источники
