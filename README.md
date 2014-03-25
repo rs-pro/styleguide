@@ -175,9 +175,9 @@ SASS\SCSS файлы необходимо всегда загружать чер
 
 ### Названия классов
 
-Никогда не используй в CSS классы с префиксом ```js-```. js- только для JS файлов.
+Никогда не используй в CSS классы с префиксом ```js-```. ```js-``` только для JS файлов.
 
-Используй префикс is- для классов состояния которые разделяются между CSS и JS.
+Используй префикс ```is-``` для классов состояния которые разделяются между CSS и JS (```is-active```, ```is-hovered```).
 
 ## Специфичность (классы vs. ids)
 
@@ -208,14 +208,29 @@ If you must use an id selector ```(#selector)``` make sure that you have no more
 When modifying an existing element for a specific use, try to use specific class names. Instead of ```.listings-layout.bigger use rules like .listings-layout.listings-bigger.``` Think about ack/greping your code in the future.
 The class names disabled, mousedown, danger, hover, selected, and active should always be namespaced by a class (```button.selected``` is a good example).
 
+
 ### Партиалы
 
 При верстке, старайся выделять повторяющиеся вещи в партиалы. Хорошие кандидаты в партиал - меню, карточка товара\новости и т.д., любой элемент повторяющийся более чем в одном месте.
 
 Элементы, повторяющиеся в трех местах и более обязательно нужно выделять в партиал.
 
+## JavaScript
+
+### CoffeeScript
+
+Пиши новый JS на CoffeeScript.
+Используй отступ в два пробела.
+Используй явно скобки ```()``` везде где возможно
+Никогда не используй ```$.get``` или ```$.post```. Вместо этого используй ```$.ajax``` и обязательно укажи обработчик и для ```success``` и для ```error```r.
+Используй ```$.fn.on``` вместо ```$.fn.bind```, ```$.fn.delegate``` и ```$.fn.live```.
+Используй ```$ ->``` вместо ```$(document).ready ->```
+Используй библиотеки, уже добавленные в проект. Избегай добавлять библиотеки, сходные по функционалу с уже добавленными в проект.
+Используй underscore или lodash если в проекте активно используется JS
+
 ## Прием верстки в программирование
 
+TODO
 
 ## Источники
 
