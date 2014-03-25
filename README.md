@@ -233,6 +233,14 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 * Используй библиотеки, уже добавленные в проект. Избегай добавлять библиотеки, сходные по функционалу с уже добавленными в проект.
 * Используй underscore или lodash если в проекте активно используется JS
 
+## Turbolinks
+
+* Для всех новых проектов используй Turbolinks.
+
+## RocketCMS
+
+TODO
+
 ## Прием верстки в программирование
 
 TODO
