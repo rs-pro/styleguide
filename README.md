@@ -251,8 +251,6 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 
 ## Поддержка броузеров
 
-### Mac
-
 | Броузер       | Версия    | Mac | Win | *nix |  Коммент               | 
 |---------------|-----------|-----|-----|------|------------------------|
 | Chrome        | 1-24      | A   | A   |  B   |                        |
