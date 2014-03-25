@@ -141,23 +141,29 @@ end
 Пример хорошей организации CSS:
 
     stylesheets
-    ├── mixins
+    ├── mixins # миксины, переменные специфичные для этого проекта
     │   ├── browser_helpers.css.sass
     │   ├── responsive_helpers.css.sass
     │   └── variables.css.sass
-    ├── plugins
+    ├── plugins # сторонние плагины
     │   ├── jquery.fancybox-1.3.4.css
     │   └── reset.css.sass
-    ├── pages
+    ├── pages # CSS отдельных страниц
     │   ├── issues.css.sass
     │   └── profile.css.sass
-    ├── extra
+    ├── extra # файлы, не включаемые в application.css и загружаемые другим путем
     │   └── editor.css.sass
-    ├── shared
+    ├── blocks # блоки, разделяемые между несколькими страницами
+    │   ├── header.css.sass
+    │   ├── home-news.css.sass
+    │   ├── home-news.css.sass
+    │   └── footer.css.sass
+    ├── shared # общий CSS, не входящий в блоки (формы, текстовый контент и т.д.)
     │   ├── forms.css.sass
+    │   ├── text_page.css.sass
     │   └── markdown.css.sass
     ├── application.css.sass
-    └── ckcontent.css.sass
+    └── ckcontent.css.sass # CSS для страницы в CKEditor
     
 **Весь CSS, использующийся только на одной конкретной странице, должен быть в отдельном файле, соответствующем этой странице. Все селекторы, относящиеся к конкретной странице, должны начинаться с класса ```.#{params[:controller]}_#{params[:action]}```**
 
