@@ -258,3 +258,5 @@ TODO
 [github styleguide](https://github.com/styleguide)
 
 [ruby style guide](https://github.com/bbatsov/ruby-style-guide)
+
+[rails style guide](https://github.com/bbatsov/rails-style-guide)
