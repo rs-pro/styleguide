@@ -151,8 +151,9 @@ end
     │   ├── jquery.fancybox-1.3.4.css
     │   └── reset.css.sass
     ├── pages # CSS отдельных страниц
-    │   ├── issues.css.sass
-    │   └── profile.css.sass
+    │   ├── news.css.sass # для небольших контроллеров (не много css) объедини все экшены в 1 файл
+    │   ├── items_show.css.sass
+    │   └── items_index.css.sass # разбивай большие контроллеры на отдельные action
     ├── extra # файлы, не включаемые в application.css и загружаемые другим путем
     │   └── editor.css.sass
     ├── blocks # блоки, разделяемые между несколькими страницами
@@ -160,7 +161,7 @@ end
     │   ├── home-news.css.sass
     │   ├── home-news.css.sass
     │   └── footer.css.sass
-    ├── shared # общий CSS, не входящий в блоки (формы, текстовый контент и т.д.)
+    ├── common # общий CSS, не входящий в блоки (формы, текстовый контент и т.д.)
     │   ├── forms.css.sass
     │   ├── text_page.css.sass
     │   └── markdown.css.sass
@@ -216,11 +217,44 @@ When modifying an existing element for a specific use, try to use specific class
 The class names disabled, mousedown, danger, hover, selected, and active should always be namespaced by a class (```button.selected``` is a good example).
 
 
+## HTML
+
+* Используй SLIM. HAML тоже допустим.
+* Ставь пробел после =. Это значительно улучшает читаемость кода.
+
 ### Партиалы
 
 При верстке, старайся выделять повторяющиеся вещи в партиалы. Хорошие кандидаты в партиал - меню, карточка товара\новости и т.д., любой элемент повторяющийся более чем в одном месте.
 
 Элементы, повторяющиеся в трех местах и более обязательно нужно выделять в партиал.
+
+### Организация файлов шаблонов
+
+Пример хорошей организации:
+
+    views
+    ├── sections # большие общие разделы страницы (шапка, подвал)
+    │   ├── _header.html.slim
+    │   └── _footer.html.slim
+    ├── items
+    │   ├── _show_sidebar.html.slim
+    │   ├── _index_sidebar.html.slim
+    │   ├── show # так тоже можно, вместо того что выше и если блоков в show больше 1-2.
+    │   │  └── _sidebar.html.slim 
+    │   ├── show.html.slim
+    │   └── index.html.slim
+    ├── blocks
+    │   ├── # в этой папке должны быть ТОЛЬКО блоки разделяемые между несколькими контроллерами
+    │   ├── _item_card.html.slim # один товар для списка товаров
+    │   └── _news.html.slim # одна новость
+    ├── pages
+    │   └── show.html.slim
+    └── layouts
+        ├── application.html.slim
+        ├── print.html.slim
+        └── email.html.slim
+
+**Обрати внимание, что пути к блокам во views повторяют пути к блокам в SASS**
 
 ## JavaScript
 
