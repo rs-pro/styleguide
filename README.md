@@ -34,7 +34,40 @@
 * Добавляй пустую строку в конце файла [eof]
 * Не делай орфографических ошибок, особенно в английских названиях переменных. Если не знаете перевод, посмотрите его [в словаре].
 * Не выравнивай символы друг с другом на разных строчках.
+
+```Ruby
+# bad
+fruits = {
+  apple:  1,
+  pear:   2,
+  banana: 3,
+}
+
+# good
+fruits = {
+  apple: 1,
+  pear: 2,
+  banana: 3,
+}
+```
+
 * Если разбиваешь список аргументов, каждый аргумент должен быть на своей строчке, также как и закрывающая скобка.
+  
+```Ruby
+# bad
+super_method(arg0, arg1,
+  arg2, arg3, arg4)
+
+# good
+super_method(
+  arg0, 
+  arg1,
+  arg2, 
+  arg3, 
+  arg4
+)
+  ```
+
 * Если разбиваешь хэш, каждый элемент и закрывающая скобка должны быть на своей строчке.
 * Используй 2 пробела для оступов (не используй табы).
 
@@ -193,25 +226,29 @@ SASS\SCSS файлы необходимо всегда загружать чер
 Хорошие кандидаты в id: header, footer, уникальные модальные окна.
 Плохие: navigation, item listings, item view pages (ex: issue view).
 
-When styling a component, start with an element + class namespace (prefer class names over ids), prefer direct descendant selectors by default, and use as little specificity as possible. Here is a good example:
+Описание стилей для отдельного блока должно начинаться с класса или идентификатора этого блока. Избегай излишней специфичности селекторов (например, использования наименований тегов совместно с классами):
 
     <ul class="category-list">
       <li class="item">Category 1</li>
       <li class="item">Category 2</li>
       <li class="item">Category 3</li>
     </ul>
-    ul.category-list { // element + class namespace
-      &>li { // direct descendant selector > for list items
+
+    // namespace блока
+    .category-list { 
+      li { 
         list-style-type: disc;
       }
-      a { // minimal specificity for all links
+      // ссылки хоть и являются вложенными в li, стилизуются одинаково в пределах всего блока
+      a { 
         color: #ff0000;
       }
     }
 
 ### CSS Specificity guidelines
 
-If you must use an id selector ```(#selector)``` make sure that you have no more than one in your rule declaration. A rule like ```#header .search #quicksearch { ... }``` is considered harmful.
+В пределах одного селектора CSS-идентификатор ```(#selector)``` может встречаться лишь единожды (вначале правила). Пример неправильного оформления: ```#header .search #quicksearch { ... }```.
+
 When modifying an existing element for a specific use, try to use specific class names. Instead of ```.listings-layout.bigger use rules like .listings-layout.listings-bigger.``` Think about ack/greping your code in the future.
 The class names disabled, mousedown, danger, hover, selected, and active should always be namespaced by a class (```button.selected``` is a good example).
 
@@ -233,6 +270,8 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 * Используй ```$.fn.on``` вместо ```$.fn.bind```, ```$.fn.delegate``` и ```$.fn.live```.
 * Используй ```$ ->``` вместо ```$(document).ready ->```
 * Используй библиотеки, уже добавленные в проект. Избегай добавлять библиотеки, сходные по функционалу с уже добавленными в проект.
+* Удаляй библиотеки, которые более не используются в проекте
+* Подлючай библиотеки при помощи Bower или другим способом, позволяющим отследить, откуда взята конкретная версия плагина (в противном случае становится невозможным отследить использование fork-ных библиотек)
 * Используй underscore или lodash если в проекте активно используется JS
 
 ## Turbolinks
