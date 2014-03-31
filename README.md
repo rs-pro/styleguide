@@ -250,9 +250,8 @@ SASS\SCSS файлы необходимо всегда загружать чер
 
 В пределах одного селектора CSS-идентификатор ```(#selector)``` может встречаться лишь единожды (вначале правила). Пример неправильного оформления: ```#header .search #quicksearch { ... }```.
 
-When modifying an existing element for a specific use, try to use specific class names. Instead of ```.listings-layout.bigger use rules like .listings-layout.listings-bigger.``` Think about ack/greping your code in the future.
+Когда меняешь существующий элемент для конкретного случая, старайся использовать специфичные имена классов. Вместо ```.listings-layout.bigger``` используй ```.listings-layout.listings-bigger.``` Думай о том как ты будешь позже делать поиск по коду.
 The class names disabled, mousedown, danger, hover, selected, and active should always be namespaced by a class (```button.selected``` is a good example).
-
 
 ## HTML
 
@@ -359,6 +358,9 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 
 Для *nix Подразумевается, что установлены шрифты MS (msttcorefonts)
 
+### Поддержка броузеров с отключенным функционалом
+
+Желательно, чтобы если в броузере пользователя выключен минимально необходимый для использования сайта функционал (js, cookies и т.д.) пользователь видел сообщение об ошибке, а не сломанный сайт.
 
 ## RocketCMS
 
