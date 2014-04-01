@@ -306,6 +306,7 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 * Никогда не используй ```$.get``` или ```$.post```. Вместо этого используй ```$.ajax``` и обязательно укажи обработчик и для ```success``` и для ```error```r.
 * Используй ```$.fn.on``` вместо ```$.fn.bind```, ```$.fn.delegate``` и ```$.fn.live```.
 * Используй ```$ ->``` вместо ```$(document).ready ->```
+* Не используй ;
 
 ## Turbolinks
 
