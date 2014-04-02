@@ -373,7 +373,7 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 
 ## RocketCMS
 
-TODO
+Все настройки rocket_cms (в т.ч. патчи моделей) должны быть строго в файле ```config/initializers/rocket_cms.rb```
 
 ## Прием верстки в программирование
 
