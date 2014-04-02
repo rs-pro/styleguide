@@ -18,6 +18,12 @@
 * Не коммитьте мерджи - используйте [rebase workflow] или в простейшем случае [rebase]
 * Пишите качественные, внятные [коммит-сообщения].
 * Каждый коммит должен содержать время, потраченное на него, в круглых скобках или без них, в самом конце текста (можно на новой строчке, чтобы не засорять лог), в формате (2h) или 5m
+* В Git сохраняются UNIX права доступа к файлу. Правильный способ их сбросить в нормальное состояние:
+```sh
+find . -type d | xargs chmod 0755
+find . -type f | xargs chmod 0644
+chmod +x bin/*
+```
 
 [rebase]: https://github.com/rs-pro/styleguide/wiki/Git-Rebase
 [rebase workflow]: http://mettadore.com/analysis/a-simple-git-rebase-workflow-explained/
