@@ -181,6 +181,7 @@ end
 * Избегай более чем трех уровней вложенности селекторов
 * Начинай селекторы с класса блока или страницы
 * На сайтах с "подвалом" обязательно использовать технику [sticky footer](http://ryanfait.com/sticky-footer/)
+* Если в проекте есть compass - [из него](http://compass-style.org/reference/compass/layout/sticky_footer/)
 
 ### CSS ресет
 
