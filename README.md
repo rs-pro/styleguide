@@ -283,6 +283,7 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 
 * Используй SLIM. HAML тоже допустим.
 * Ставь пробел после =. Это значительно улучшает читаемость кода.
+* Не используй input[type=image] для стилизации кнопок.
 
 ### Партиалы
 
