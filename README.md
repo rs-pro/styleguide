@@ -385,27 +385,36 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 
 ## Поддержка броузеров
 
-| Броузер       | Версия    | Mac | Win | *nix |  Коммент               | 
-|---------------|-----------|-----|-----|------|------------------------|
-| Chrome        | 4-24      | B   | B   |  C   |                        |
-| Chrome        | 24-32     | A   | A   |  B   |                        |
-| Chrome        | 33+       | A   | A+  |  B   |                        |
-| Firefox       | 3.5-18    | B   | B   |  C   |                        |
-| Firefox       | 19-27     | A   | A   |  B   |                        |
-| Firefox       | 28+       | A   | A+  |  B   |                        |
-| Opera         | 9-10.1    | B   | B   |  C   |                        |
-| Opera         | 10.5-12.1 | A   | A   |  C   |                        |
-| Opera         | 15-18     | A   | A   |  B   |  Webkit                |
-| Opera         | 19+       | A   | A+  |  B   |  Webkit                |
-| Я.броузер     |           | -   | A   |  -   |  Webkit с кучей багов  |
-| Safari        | 5.1       | A   | C   |  -   |  Webkit                |
-| Safari        | 6         | A   | C   |  -   |  Webkit                |
-| IE            | 6         | -   | -   |  -   |                        |
-| IE            | 7         | -   | D   |  -   |                        |
-| IE            | 8         | -   | B   |  -   |                        |
-| IE            | 9         | -   | A   |  -   |                        |
-| IE            | 10        | -   | A+  |  -   |                        |
-| IE            | 11        | -   | A+  |  -   |                        |
+| Броузер       | Версия    | Mac | Win | *nix |  Коммент               | Доля | Upd |
+|---------------|-----------|-----|-----|------|------------------------|------|-----|
+| Chrome        | 4-24      | B   | B   |  C   |  Webkit                |    0 | ✔  |
+| Chrome        | 24-27     | A   | A   |  B   |  Webkit                |    0 | ✔  |
+| Chrome        | 28-32     | A   | A   |  B   |  Blink                 |    0 | ✔  |
+| Chrome        | 33        | A   | A+  |  B   |  Blink                 |    0 | ✔  |
+| Chrome        | 34+       | A   | A+  |  B   |  Blink                 |  25% | ✔  |
+| Firefox       | 3.5-18    | B   | B   |  C   |                        |    0 | ✔  |
+| Firefox       | 19-27     | A   | A   |  B   |                        |    0 | ✔  |
+| Firefox       | 28        | A   | A+  |  B   |                        |  4%  | ✔  |
+| Firefox       | 29+       | A   | A+  |  B   |                        |  8%  | ✔  |
+| Opera         | 9-10.1    | B   | B   |  C   |                        |    0 | ✔  |
+| Opera         | 10.5-12.1 | A   | A   |  C   |                        | 4.5% | ✔  |
+| Opera         | 15-18     | A   | A   |  B   |  Blink                 |    0 | ✔  |
+| Opera         | 19+       | A   | A+  |  B   |  Blink                 | 4.1% | ✔  |
+| Safari        | 5.1       | C   | C   |  -   |  Webkit                | 0.5% | ?   |
+| Safari        | 6         | C   | -   |  -   |  Webkit                | 0.1% | ?   |
+| Safari        | 7         | A   | -   |  -   |  Webkit                | 0.3% | ?   |
+| Я.броузер     |           | -   | A   |  -   |  Самоделка на Webkit   | 5.1% | ✔  |
+| Интернет.mail |           | -   | B   |  -   |  Самоделка на Webkit   | 2.4% | ✔  |
+| Амиго.mail    |           | -   | C   |  -   |  Самоделка на Webkit   |   ?  |  ?  |
+| Рамблер       |           | -   | C   |  -   |  Самоделка на Webkit   | 0.0% | ✔  |
+| IE            | 6         | -   | -   |  -   |                        | 0.1% | ✘  |
+| IE            | 7         | -   | D   |  -   |                        | 0.4% | ✘  |
+| IE            | 8         | -   | B   |  -   |                        | 1.5% | ✘  |
+| IE            | 9         | -   | A   |  -   |                        | 1.1% | ✘  |
+| IE            | 10        | -   | A+  |  -   |                        | 2.0% | ✘  |
+| IE            | 11        | -   | A+  |  -   |                        | 2.4% | ✘  |
+
+Данные статистики: http://www.liveinternet.ru/stat/ru/browsers.html
 
 ### Легенда
 
