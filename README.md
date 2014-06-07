@@ -207,7 +207,7 @@ end
     │   ├── browser_helpers.css.sass
     │   ├── responsive_helpers.css.sass
     │   └── variables.css.sass
-    ├── plugins # сторонние плагины
+    ├── vendor # сторонние плагины
     │   ├── jquery.fancybox-1.3.4.css
     │   └── reset.css.sass
     ├── pages # CSS отдельных страниц
@@ -240,6 +240,33 @@ SASS\SCSS файлы необходимо всегда загружать чер
 
 .rule { ... }
 ```
+
+### Организация JS
+
+Пример хорошей организации JS:
+
+    stylesheets
+    ├── controllers # angular
+    ├── directives # angular
+    ├── templates # JST клиент-сайд шаблоны
+    ├── vendor # сторонние плагины
+    │   └── jquery.fancybox-1.3.4.js
+    ├── pages # JS отдельных страниц
+    │   ├── news.js.coffee # для небольших контроллеров (не много css) объедини все экшены в 1 файл
+    │   ├── items.js.coffee
+    │   └── items_index.js.coffee # разбивай большие контроллеры на отдельные action
+    ├── extra # файлы, не включаемые в application.js и загружаемые другим путем
+    │   └── editor.js.coffee
+    ├── blocks # блоки, разделяемые между несколькими страницами
+    │   ├── header.js.coffee
+    │   ├── home-news.js.coffee
+    │   ├── home-news.js.coffee
+    │   └── footer.js.coffee
+    ├── common # общий JS, не входящий в блоки (формы, текстовый контент и т.д.)
+    │   ├── forms.js.coffee
+    │   ├── text_page.js.coffee
+    │   └── markdown.js.coffee
+    └── application.js.coffee
 
 ### Названия классов
 
