@@ -389,14 +389,14 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 |---------------|-----------|-----|-----|------|------------------------|
 | Chrome        | 4-24      | B   | B   |  C   |                        |
 | Chrome        | 24-32     | A   | A   |  B   |                        |
-| Chrome        | 33        | A   | A+  |  B   |                        |
+| Chrome        | 33+       | A   | A+  |  B   |                        |
 | Firefox       | 3.5-18    | B   | B   |  C   |                        |
 | Firefox       | 19-27     | A   | A   |  B   |                        |
-| Firefox       | 28        | A   | A+  |  B   |                        |
+| Firefox       | 28+       | A   | A+  |  B   |                        |
 | Opera         | 9-10.1    | B   | B   |  C   |                        |
 | Opera         | 10.5-12.1 | A   | A   |  C   |                        |
 | Opera         | 15-18     | A   | A   |  B   |  Webkit                |
-| Opera         | 19        | A   | A+  |  B   |  Webkit                |
+| Opera         | 19+       | A   | A+  |  B   |  Webkit                |
 | Я.броузер     |           | -   | A   |  -   |  Webkit с кучей багов  |
 | Safari        | 5.1       | A   | C   |  -   |  Webkit                |
 | Safari        | 6         | A   | C   |  -   |  Webkit                |
@@ -405,7 +405,7 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
 | IE            | 8         | -   | B   |  -   |                        |
 | IE            | 9         | -   | A   |  -   |                        |
 | IE            | 10        | -   | A+  |  -   |                        |
-| IE            | 11        | -   | A   |  -   |                        |
+| IE            | 11        | -   | A+  |  -   |                        |
 
 ### Легенда
 
