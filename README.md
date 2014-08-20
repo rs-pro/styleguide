@@ -225,6 +225,10 @@ end
     │   ├── forms.css.sass
     │   ├── text_page.css.sass
     │   └── markdown.css.sass
+    ├── lib # общие библиотеки
+    │   ├── fonts.css.sass
+    │   ├── buttons.css.sass
+    │   └── icons.css.sass
     ├── application.css.sass
     └── ckcontent.css.sass # CSS для страницы в CKEditor
     
