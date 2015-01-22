@@ -249,7 +249,7 @@ SASS\SCSS файлы необходимо всегда загружать чер
 
 Пример хорошей организации JS:
 
-    stylesheets
+    javascripts
     ├── controllers # angular
     ├── directives # angular
     ├── templates # JST клиент-сайд шаблоны
