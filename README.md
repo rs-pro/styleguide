@@ -2,7 +2,6 @@
 
 ## Основное
 
-* Будь последователен.
 * Не переписывай существующий код чтобы он соответствовал этому стайлгайду.
 * Не нарушай стайлгайд без хорошей причины.
 * Причина хороша, если ты можешь убедить других что она хороша.
@@ -18,6 +17,7 @@
 * Не коммитьте мерджи - используйте [rebase workflow] или в простейшем случае [rebase]
 * Пишите качественные, внятные [коммит-сообщения].
 * Каждый коммит должен содержать время, потраченное на него, в круглых скобках или без них, в самом конце текста (можно на новой строчке, чтобы не засорять лог), в формате (2h) или 5m
+* Указывай в коммит-сообщении номер задачи. Закрывай задачи из коммитов. Пример: ```модели page, project fixes #123 10m```, "поправлена страница регистрации #20 2h"
 * В Git сохраняются UNIX права доступа к файлу. Правильный способ их сбросить в нормальное состояние:
 ```sh
 find . -type d -exec chmod 755 {} +
@@ -34,22 +34,22 @@ chmod +x bin/*
 * Избегай inline комментариев
 * Избегай строк длиннее 80 символов.
 * Избегай файлов больше 100 строк кода (не считая пустых строк и комментариев).
-* Используй SASS @import\@mixin, concerns и т.д.
+* Используй SASS ```@import```, ```@mixin```, concerns и т.д.
 * Удаляй пробелы в конце всех строк.
 * Используй Unix-style line endings (`\n`) ([git eol]).
 * Добавляй пустую строку в конце файла [eof]
-* Не делай орфографических ошибок, особенно в английских названиях переменных. Если не знаете перевод, посмотрите его [в словаре].
+* Не делай орфографических ошибок, особенно в английских названиях переменных. Если не знаете перевод, посмотрите его [в словаре] или [google translate]. Это затрудняет поиск по коду и дальнейшую работу с кодом.
 * Не выравнивай символы друг с другом на разных строчках.
 
 ```Ruby
-# bad
+# плохо
 fruits = {
   apple:  1,
   pear:   2,
   banana: 3,
 }
 
-# good
+# хорошо
 fruits = {
   apple: 1,
   pear: 2,
@@ -58,7 +58,7 @@ fruits = {
 ```
 
 * Если разбиваешь список аргументов, каждый аргумент должен быть на своей строчке, также как и закрывающая скобка.
-  
+
 ```Ruby
 # bad
 super_method(arg0, arg1,
@@ -66,10 +66,10 @@ super_method(arg0, arg1,
 
 # good
 super_method(
-  arg0, 
+  arg0,
   arg1,
-  arg2, 
-  arg3, 
+  arg2,
+  arg3,
   arg4
 )
   ```
@@ -79,75 +79,18 @@ super_method(
 
 [git eol]: https://help.github.com/articles/dealing-with-line-endings
 [в словаре]: http://slovari.yandex.ru/
+[google translate]: http://translate.google.com/
 [dot guideline example]: https://github.com/thoughtbot/guides/blob/master/style/samples/ruby.rb#L11
 [eof]: http://unix.stackexchange.com/questions/23903/should-i-end-my-text-script-files-with-a-newline
 
 ## Ruby
 
-* Отделяй многострочные блоки 1 пустой строкой с обоих сторон.
-* Use spaces around operators, after commas, colons and semicolons, around { and before }.
+Для ruby-кода мы используем [styleguide гитхаба].
 
-```ruby
-sum = 1 + 2
-a, b = 1, 2
-1 > 2 ? true : false; puts "Hi"
-[1, 2, 3].each { |e| puts e }
-```
+Код может и должен быть автоматически проверен на соответствие этому стайлгайду при помощи [rubocop] с настройками github.
 
-* Не добавляй пробелы после `(`, `[` или перед `]`, `)`.
-
-```ruby
-some(arg).other
-[1, 2, 3].length
-```
-
-* Не добавляй пробел после !.
-
-```ruby
-!array.include?(element)
-```
-
-* Indent when as deep as case.
-
-```ruby
-case
-when song.name == "Misty"
-  puts "Not again!"
-when song.duration > 120
-  puts "Too long!"
-when Time.now.hour > 21
-  puts "It's too late"
-else
-  song.play
-end
-
-kind = case year
-       when 1850..1889 then "Blues"
-       when 1890..1909 then "Ragtime"
-       when 1910..1929 then "New Orleans Jazz"
-       when 1930..1939 then "Swing"
-       when 1940..1950 then "Bebop"
-       else "Jazz"
-       end
-```
-
-* Отделяй методы 1 пустой строкой и чтобы разделить метод на параграфы.
-
-```ruby
-def some_method
-    data = initialize(options)
-
-    data.manipulate!
-
-    data.result
-end
-
-def some_method
-    result
-end
-```
-
-[дополнительно](https://github.com/styleguide/ruby)
+[styleguide гитхаба]: https://github.com/styleguide/ruby
+[rubocop]: https://github.com/github/rubocop-github
 
 ## Rails
 
@@ -156,7 +99,6 @@ end
 ```resources :news, only: [:index, :show]```
 * Названия всех моделей и всех полей моделей, видимые в интерфейсе сайта или админке, должны быть переведены на язык сайта
 * Перевод моделей и полей моделей должен находиться в ```config/locales/ru.models.yml```
-* Временные картинки должны находиться в папке ```public/tmp```
 
 ## Прием макета в верстку
 
@@ -174,10 +116,10 @@ end
 
 В момент приемки макетов, нужно бегло проверить наличие всех пунктов этого списка в полученных файлах и сообщить о недостающих пунктах.
 
-## CSS
+## CSS, верстка
 
 * Используй SASS синтакс
-* Используй SCSS синтакс для файлов в css синтаксисе, которые ты не хочешь конвертировать
+* Используй SCSS синтакс для файлов в css синтаксисе, которые ты не хочешь конвертировать. Не пиши свой код в SCSS.
 * Все ссылки на внешние картинки - строго image-url вместо url
 * Никогда не используй ```#= require_tree .```
 * Избегай более чем трех уровней вложенности селекторов
@@ -186,17 +128,44 @@ end
 * Если в проекте есть compass - [из него](http://compass-style.org/reference/compass/layout/sticky_footer/)
 * Лого РС в подвале должно обязательно быть ссылкой, вести на наш сайт http://rocketscience.pro/ и что-то делать при наведении (как и любая ссылка)
 * Разумно используй z-index. В рамках одного проекта, блоки должны иметь разные группы z-index. Старайся выделять 10 уровней z-index на каждый блок, например от 20 до 30, и внутри блока использовать только z-index из этого диапазона.
+* Временные картинки должны находиться в папке ```public/tmp```
 
 ### CSS ресет
 
-* Хорошие CSS ресеты:
-```css
+Хорошие CSS ресеты:
+
+* Минимальный
+```sas
 *
   margin: 0
   padding: 0
 ```
+* Продвинутый минимальный
+```sass
+*
+	vertical-align: baseline
+	font-weight: inherit
+	font-family: inherit
+	font-style: inherit
+	font-size: 100%
+	border: 0 none
+	outline: 0
+	padding: 0
+	margin: 0
+```
+* [normalize.css], [sanitize.css]
+* [css mini reset]
+* [marx]
 
-[normalize](http://necolas.github.io/normalize.css/)
+[normalize.css](http://necolas.github.io/normalize.css/)
+[sanitize.css](https://github.com/jonathantneal/sanitize.css)
+[css mini reset](http://www.vcarrer.com/2010/05/css-mini-reset.html)
+[marx](https://github.com/mblode/marx)
+Запрещенные ресеты:
+
+Eric Meyer’s “Reset CSS” (Причина - засорение DOM инспектора)
+Eric Meyer’s “Reset CSS” 2.0 (Причина - засорение DOM инспектора)
+А также любые аналогичные ресеты с перечислением 5+ тегов в одном блоке: html5doctor.com Reset Stylesheet, CleanSlate, Typeset.css, minireset.css
 
 ### Организация CSS
 
@@ -231,7 +200,7 @@ end
     │   └── icons.css.sass
     ├── application.css.sass
     └── ckcontent.css.sass # CSS для страницы в CKEditor
-    
+
 **Весь CSS, использующийся только на одной конкретной странице, должен быть в отдельном файле, соответствующем этой странице. Все селекторы, относящиеся к конкретной странице, должны начинаться с класса ```.#{params[:controller]}_#{params[:action]}```**
 
 SASS\SCSS файлы необходимо всегда загружать через @import, простые CSS файлы - через require. В простом CSS недопустимы ссылки на картинки и другие внешние файлы, кроме случая когда они лежат в папке ```public/```
@@ -294,12 +263,12 @@ SASS\SCSS файлы необходимо всегда загружать чер
     </ul>
 
     // namespace блока
-    .category-list { 
-      li { 
+    .category-list {
+      li {
         list-style-type: disc;
       }
       // ссылки хоть и являются вложенными в li, стилизуются одинаково в пределах всего блока
-      a { 
+      a {
         color: #ff0000;
       }
     }
@@ -336,9 +305,9 @@ The class names disabled, mousedown, danger, hover, selected, and active should 
     │   ├── _index_sidebar.html.slim
     │   ├── _item_card.html.slim # один товар для списка товаров, может использоваться в разных контроллерах
     │   ├── show # так тоже можно, вместо того что выше и если блоков в show больше 1-2.
-    │   │  └── _sidebar.html.slim 
+    │   │  └── _sidebar.html.slim
     │   ├── show.html.slim
-    │   └── index.html.slim    
+    │   └── index.html.slim
     ├── news
     │   ├── _news.html.slim # блок новости, повторяющийся в наскольких шаблонах
     │   ├── index.html.slim
