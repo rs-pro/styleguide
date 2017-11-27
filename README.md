@@ -32,10 +32,12 @@ find . -type d -exec chmod 755 {} +
 find . -type f -exec chmod 644 {} +
 chmod +x bin/*
 ```
+* Никогда не коммить файлы, которые создает твоя ОС, IDE или еще что-то (см [global gitignore])
 
 [rebase]: https://github.com/rs-pro/styleguide/wiki/Git-Rebase
 [rebase workflow]: http://mettadore.com/analysis/a-simple-git-rebase-workflow-explained/
 [коммит-сообщения]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+[global gitignore]: https://gist.github.com/subfuzion/db7f57fff2fb6998a16c
 
 ## Формат (общее)
 
