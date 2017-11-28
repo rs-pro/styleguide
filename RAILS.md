@@ -109,8 +109,11 @@ SimpleForm.setup do |config|
 end
 ```
 Ещё:
-https://github.com/plataformatec/simple_form
-https://github.com/plataformatec/simple_form/wiki
+
+[Помощь](https://github.com/plataformatec/simple_form)
+
+[Вики](https://github.com/plataformatec/simple_form/wiki)
+
 [Настройка simple form под БЭМ](http://arjanvandergaag.nl/blog/simpleform-custom-inputs.html)
 
 ### Организация
