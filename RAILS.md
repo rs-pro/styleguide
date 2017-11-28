@@ -28,6 +28,7 @@
  = c.input :middle_name, icon: "name"
  # Хорошо: названия полей убраны в i18n
  = c.input :passport, icon: "number"
+ = f.input :address, as: :string, icon: "place", tooltip: "Выбрать на карте"
 ```
 
 Пример i18n:
