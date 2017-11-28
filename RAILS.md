@@ -12,7 +12,8 @@
 * Картинки со смысловой нагрузкой лежат в /app/assets/images/my_pic.png, image_tag "my_pic.png"
 * Все меню - строго через [simple_navigation](https://github.com/codeplant/simple-navigation)
 * Все формы больше 2 полей - строго через simple_form, без дополнительных классов и изврата.
-Пример как никогда не делать 
+
+Пример как никогда не делать:
 ```slim
 # ОЧЕНЬ ПЛОХО
 = simple_form_for @company, url: company_path(@company) do |c|
@@ -21,6 +22,7 @@
   .profile-setting-input
     = c.input :passport, class: 'form-basic__input--number', placeholder: "Номер паспорта"
 ```
+
 Пример правильной реализации:
 ```slim
 # Хорошо: код убран в кастомный form builder
