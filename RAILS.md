@@ -10,6 +10,7 @@
 * В шаблонах, все ссылки на внешние картинки - строго image_tag
 * Картинки-заглушки лежат в /public/tmp/my_pic.png, image_tag "/tmp/my_pic.png"
 * Картинки со смысловой нагрузкой лежат в /app/assets/images/my_pic.png, image_tag "my_pic.png"
+* Все меню - строго через [simple_navigation](https://github.com/codeplant/simple-navigation)
 * Все формы больше 2 полей - строго через simple_form, без дополнительных классов и изврата.
 Пример как никогда не делать 
 ```slim
@@ -72,7 +73,7 @@ class MinimalFormBuilder < SimpleForm::FormBuilder
 end
 ```
 Пример добавления иконок к полям:
-```
+```ruby
 # config/initializers/simple_form.rb
 module SimpleForm
   module Components
@@ -103,8 +104,10 @@ SimpleForm.setup do |config|
     b.use :icon
   end
 end
-
 ```
+Ещё:
+https://github.com/plataformatec/simple_form
+https://github.com/plataformatec/simple_form/wiki
 
 ### Организация
 
