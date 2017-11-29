@@ -33,6 +33,8 @@ find . -type f -exec chmod 644 {} +
 chmod +x bin/*
 ```
 * Никогда не коммить файлы, которые создает твоя ОС, IDE или еще что-то (см [global gitignore])
+* Обязательно периодически ребейзить вашу ветку на мастер
+* Конфликты мерджа решает автор кода который не в мастере.
 
 [rebase]: https://github.com/rs-pro/styleguide/wiki/Git-Rebase
 [rebase workflow]: http://mettadore.com/analysis/a-simple-git-rebase-workflow-explained/
