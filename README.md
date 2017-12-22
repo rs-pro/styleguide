@@ -42,7 +42,7 @@ chmod +x bin/*
 * Конфликты мерджа решает автор кода который не в мастере.
 
 [rebase]: https://github.com/rs-pro/styleguide/wiki/Git-Rebase
-[rebase workflow]: http://mettadore.com/analysis/a-simple-git-rebase-workflow-explained/
+[rebase workflow]: https://randyfay.com/content/rebase-workflow-git
 [коммит-сообщения]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 [global gitignore]: https://gist.github.com/subfuzion/db7f57fff2fb6998a16c
 
