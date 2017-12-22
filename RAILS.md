@@ -7,6 +7,10 @@
 * Не используй синтаксис ```= render partial: "header", locals: {}```, используй ```= render "header", {}```, исключение - ```render collection: ....```
 * Всегда выводи flash сообщения ```= render 'blocks/messages'``` в rocket_cms
 
+## Требования к rails бэкенду со стороны фронтэнда
+
+* Для верстки писем должны быть реализованы MailerPreview
+
 ## Требования к rails фронтэнду
 
 * В шаблонах, все ссылки на внешние картинки - строго image_tag
