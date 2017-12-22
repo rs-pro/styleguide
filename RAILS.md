@@ -9,7 +9,7 @@
 
 ## Требования к rails бэкенду со стороны фронтэнда
 
-* Для верстки писем должны быть реализованы MailerPreview
+* Для верстки писем должны быть реализованы MailerPreview http://rusrails.ru/action-mailer-basics#predprosmotr-pisem
 
 ## Требования к rails фронтэнду
 
