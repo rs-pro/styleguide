@@ -6,6 +6,10 @@
 * Перевод моделей и полей моделей должен находиться в ```config/locales/ru.models.yml```
 * Не используй синтаксис ```= render partial: "header", locals: {}```, используй ```= render "header", {}```, исключение - ```render collection: ....```
 * Всегда выводи flash сообщения ```= render 'blocks/messages'``` в rocket_cms
+* Не используй интерполяцию строк если она не нужна.
+```
+a href="#{post_path(post)}"
+```
 
 ## Требования к rails бэкенду со стороны фронтэнда
 
