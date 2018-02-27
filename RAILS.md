@@ -156,3 +156,6 @@ end
 ## RocketCMS
 
 Все настройки rocket_cms (в т.ч. патчи моделей) должны быть строго в файле ```config/initializers/rocket_cms.rb```
+
+## Требования к Backend
+- Крайне желательно добавлять комментарии к полям в миграциях способом [Инструкция](https://blog.bigbinary.com/2016/06/21/rails-5-supports-adding-comments-migrations.html)
