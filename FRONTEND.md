@@ -164,15 +164,18 @@ body
 ```
 
 [normalize.css](http://necolas.github.io/normalize.css/)
+
 [sanitize.css](https://github.com/jonathantneal/sanitize.css)
+
 [css mini reset](http://www.vcarrer.com/2010/05/css-mini-reset.html)
+
 [marx](https://github.com/mblode/marx)
 
-Запрещенные ресеты:
+#### Запрещенные ресеты:
 
-Eric Meyer’s “Reset CSS” (Причина - засорение DOM инспектора)
-Eric Meyer’s “Reset CSS” 2.0 (Причина - засорение DOM инспектора)
-А также любые аналогичные ресеты с перечислением 5+ тегов в одном блоке: html5doctor.com Reset Stylesheet, CleanSlate, Typeset.css, minireset.css
+- Eric Meyer’s “Reset CSS” (Причина - засорение DOM инспектора)
+- Eric Meyer’s “Reset CSS” 2.0 (Причина - засорение DOM инспектора)
+- А также любые аналогичные ресеты с перечислением 5+ тегов в одном блоке: html5doctor.com Reset Stylesheet, CleanSlate, Typeset.css, minireset.css
 
 ### Статичные текстовые страницы
 
