@@ -142,25 +142,15 @@
 * Продвинутый минимальный
 ```sass
 *
-	vertical-align: baseline
-	font-weight: inherit
-	font-family: inherit
-	font-style: inherit
-	font-size: 100%
-	border: 0 none
-	outline: 0
-	padding: 0
-	margin: 0
-```
-* Еще один
-```sass
-body
-  line-height: 1.2
-  margin: 0
+  vertical-align: baseline
+  font-weight: inherit
+  font-family: inherit
+  font-style: inherit
+  font-size: 100%
+  border: 0 none
+  outline: 0
   padding: 0
-
-*
-  box-sizing: border-box
+  margin: 0
 ```
 
 [normalize.css](http://necolas.github.io/normalize.css/)
