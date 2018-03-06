@@ -5,7 +5,7 @@
 ## Webpack, настройки
 
 * Для всех проектов используется только webpack. Запрещено использовать sprockets, gulp, grunt и т.д. для создания новых проектов
-* Используй наш [конфиг webpack]
+* Используй наш [конфиг webpack](https://github.com/rs-pro/webpack-starter)
 
 ### Организация файлов в webpack
 
@@ -40,8 +40,6 @@
     │   │   └── index.es6
     │   └── projects
     └─ application.es6 # импортируй здесь все нужные блоки и страницы
-
-[конфиг webpack](https://github.com/rs-pro/webpack-starter)
 
 ## Общие требования к фронтэнду
 
