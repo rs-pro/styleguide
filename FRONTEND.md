@@ -154,14 +154,22 @@
 	padding: 0
 	margin: 0
 ```
-* [normalize.css], [sanitize.css]
-* [css mini reset]
-* [marx]
+* Еще один
+```sass
+body
+  line-height: 1.2
+  margin: 0
+  padding: 0
+
+*
+  box-sizing: border-box
+```
 
 [normalize.css](http://necolas.github.io/normalize.css/)
 [sanitize.css](https://github.com/jonathantneal/sanitize.css)
 [css mini reset](http://www.vcarrer.com/2010/05/css-mini-reset.html)
 [marx](https://github.com/mblode/marx)
+
 Запрещенные ресеты:
 
 Eric Meyer’s “Reset CSS” (Причина - засорение DOM инспектора)
