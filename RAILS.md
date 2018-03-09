@@ -1,5 +1,6 @@
 ## Общее
 
+* Смотри [ruby-style-guide](https://github.com/bbatsov/ruby-style-guide) и [rubocop](https://github.com/bbatsov/rubocop)
 * В роутах в случае использования ресурсов всегда включай только нужные action'ы
 ```resources :news, only: [:index, :show]```
 * Названия всех моделей и всех полей моделей, видимые в интерфейсе сайта или админке, должны быть переведены на язык сайта
