@@ -58,6 +58,8 @@
 * Никогда не используй устаревшие теги https://www.w3.org/TR/html5/obsolete.html
 * Если у тебя есть вектор в макете, запрещено его растрировать, т.е. необходимо использовать его как SVG.
 * Включай box-sizing: border-box для всего проекта глобально
+* Запрещено создавать классы из одного конструктора. Используйте функции.
+
 ```
 *
   box-sizing: border-box
@@ -138,19 +140,6 @@
 *
   margin: 0
   padding: 0
-```
-* Продвинутый минимальный
-```sass
-*
-  vertical-align: baseline
-  font-weight: inherit
-  font-family: inherit
-  font-style: inherit
-  font-size: 100%
-  border: 0 none
-  outline: 0
-  padding: 0
-  margin: 0
 ```
 
 [normalize.css](http://necolas.github.io/normalize.css/)
