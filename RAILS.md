@@ -18,7 +18,7 @@
 * В шаблонах, все ссылки на внешние картинки - строго image_tag
 * Картинки-заглушки лежат в /public/tmp/my_pic.png, image_tag "/tmp/my_pic.png"
 * Картинки со смысловой нагрузкой лежат в /app/assets/images/my_pic.png, image_tag "my_pic.png"
-* Все меню - строго через [simple_navigation](https://github.com/codeplant/simple-navigation) (предпочтительно, через наш форк - [rocket_navigation](https://github.com/rs-pro/rocket_navigation) )
+* Все меню - строго через [simple_navigation](https://github.com/codeplant/simple-navigation) (предпочтительно, через наш форк - [rocket_navigation](https://gitlab.com/rocket-science/rocket_navigation))
 * Все формы больше 2 полей - строго через simple_form, без дополнительных классов и изврата.
 
 Пример как никогда не делать:
